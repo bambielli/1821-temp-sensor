@@ -9,7 +9,7 @@ AIRTABLE_API_KEY = os.environ['AIRTABLE_API_KEY']
 AIRTABLE_BASE_KEY = os.environ['AIRTABLE_BASE_KEY']
 AIRTABLE_TABLE_NAME = os.environ['AIRTABLE_TABLE_NAME']
 TIME_BETWEEN_PUBLISH = 0.5 # in seconds
-TEMP_THRESHOLD = 80 # in Farenheit
+TEMP_THRESHOLD = 40 # in Farenheit
 
 airtable_client = Airtable(AIRTABLE_BASE_KEY, AIRTABLE_TABLE_NAME, api_key=AIRTABLE_API_KEY)
 record_id = airtable_client.get_all(view="Readings")[0]["id"]
